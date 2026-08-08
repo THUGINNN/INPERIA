@@ -1,0 +1,35 @@
+/* side menu when .side-open applied */
+body.side-open::before{
+  content:"";
+  position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:70;
+}
+.side-panel{
+  position:fixed;right:0;top:0;height:100vh;width:320px;background:linear-gradient(180deg,#0b0b0b,#0a0a0a);
+  box-shadow:-20px 0 60px rgba(0,0,0,0.8);padding:20px;z-index:80;transform:translateX(100%);transition:transform 260ms ease;
+}
+body.side-open .side-panel{transform:translateX(0)}
+
+/* mobile nav appearance */
+@media (max-width:900px){
+  .nav a:not(.btn){display:none}
+  .nav .btn{display:inline-block}
+  .hero-cards{display:none}
+  .features .feature-grid{grid-template-columns:1fr}
+  .cards-grid{grid-template-columns:1fr}
+  .container{padding:22px}
+  .main-header{padding:8px 12px}
+}
+
+/* chat mobile tweak */
+@media (max-width:720px){
+  .chat-main{flex-direction:column}
+  .chat-users{width:100%;order:2}
+  .chat-window{order:1}
+  .messages{min-height:300px}
+}
+
+/* small utilities */
+.hidden-mobile{display:none}
+@media (min-width:901px){
+  .hidden-desktop{display:none}
+}
