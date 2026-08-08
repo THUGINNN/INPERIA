@@ -14,7 +14,7 @@
   <header class="main-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">
-        <img src="assets/logo.png" alt="THUGINNN IMPERIA" class="logo" />
+        <img src="assets/logo.svg" alt="THUGINNN IMPERIA" class="logo" />
         <span class="brand-text">THUGINNN IMPERIA</span>
       </a>
 
@@ -25,21 +25,25 @@
         <a href="tickets.html">Տոմսեր</a>
         <a class="btn btn-ghost" href="login.html">Մուտք</a>
         <a class="btn btn-primary" href="register.html">Գրանցվել</a>
-        <a class="btn btn-discord" href="#" id="discord-invite">Discord</a>
+        <a class="btn btn-discord" href="#" id="discord-invite">
+          <img src="assets/icons/discord.svg" alt="Discord" style="height:18px;vertical-align:middle;margin-right:8px"> Discord
+        </a>
         <button id="menu-toggle" class="dot-menu" aria-label="Menu">⋯</button>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero container">
+    <section class="hero container" style="background-image: linear-gradient(rgba(3,16,22,0.45), rgba(3,16,22,0.45)), url('assets/hero-bg.webp'), url('assets/hero-overlay.png'); background-size: cover, cover, cover; background-position:center;">
       <div class="hero-content">
         <h1>ԲԱՐԻ ԳԱԼՈՒՍՏ THUGINNN IMPERIA</h1>
         <p>Armenian Minecraft community — խաղ, ընկերներ և հարգանք։ Միացիր մեզ՝ խաղալու և համայնք զարգացնելու համար։</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="register.html">Գրանցվել</a>
           <a class="btn btn-ghost" href="login.html">Մուտք</a>
-          <a class="btn btn-discord" href="#" id="hero-discord">Join Discord</a>
+          <a class="btn btn-discord" href="#" id="hero-discord">
+            <img src="assets/icons/discord.svg" alt="Discord" style="height:16px;vertical-align:middle;margin-right:8px"> Join Discord
+          </a>
         </div>
       </div>
 
@@ -63,10 +67,14 @@
       <h2>Ինչու THUGINNN IMPERIA</h2>
       <div class="feature-grid">
         <div class="feature">Premium ութեստետիկա 💎</div>
-        <div class="feature">Անհատականացված verification</div>
+        <div class="feature">Անհատականավորված verification</div>
         <div class="feature">Ամենուրաս responsive</div>
         <div class="feature">Discord ինտեգրում</div>
       </div>
+    </section>
+
+    <section class="container center" style="padding:20px 0">
+      <img src="assets/backgrounds/banner-top.webp" alt="Banner" style="max-width:100%;border-radius:12px;border:1px solid rgba(255,255,255,0.03)">
     </section>
   </main>
 
@@ -77,15 +85,6 @@
   </footer>
 
   <script>
-    // small inline: set invite from env-like placeholder (real URL from backend/.env)
-    document.getElementById('discord-invite').addEventListener('click', e => {
-      e.preventDefault();
-      window.location.href = '#'; // replace with actual invite URL by JS or server
-    });
-    document.getElementById('hero-discord').addEventListener('click', e => {
-      e.preventDefault();
-      window.location.href = '#';
-    });
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
