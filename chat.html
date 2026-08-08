@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="hy">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Online Chat — THUGINNN IMPERIA</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="/socket.io/socket.io.js"></script>
+  <script defer src="js/chat.js"></script>
+</head>
+<body class="dark chat-page">
+  <header class="container chat-header">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt="logo" /></a>
+    <div class="chat-controls">
+      <span id="onlineCount">Online: 0</span>
+      <a href="dashboard.html" class="btn btn-ghost">Իմ էջը</a>
+    </div>
+  </header>
+
+  <main class="container chat-main">
+    <aside class="chat-users" id="usersList">
+      <h3>Online Խաղացողններ</h3>
+      <ul id="users"></ul>
+    </aside>
+
+    <section class="chat-window">
+      <div id="messages" class="messages"></div>
+      <form id="chatForm" class="chat-form" action="#" onsubmit="return false;">
+        <input id="messageInput" placeholder="Գրեք հաղորդագրությունը..." autocomplete="off" />
+        <button id="sendBtn" class="btn btn-primary">Ուղարկել</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
