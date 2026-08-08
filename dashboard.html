@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="hy">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard — THUGINNN IMPERIA</title>
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <script defer src="js/dashboard.js"></script>
+</head>
+<body class="dark">
+  <header class="dash-header">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt="logo" /></a>
+    <nav>
+      <a href="chat.html">Chat</a>
+      <a href="tickets.html">Tickets</a>
+      <a href="verification.html">Verification</a>
+      <a href="admin.html" class="admin-link">Admin</a>
+      <button id="logoutBtn" class="btn btn-ghost">Ելք</button>
+    </nav>
+  </header>
+
+  <main class="dashboard container">
+    <aside class="profile-card">
+      <div class="avatar" id="avatar">A</div>
+      <h2 id="displayName">--</h2>
+      <p id="realName">--</p>
+      <p class="muted">Minecraft: <span id="minecraftName">--</span></p>
+      <p class="muted">Email: <span id="email">--</span></p>
+      <p>Email հաստատված: <span id="emailVerified">No</span></p>
+      <p>Discord հաստատված: <span id="discordVerified">No</span></p>
+      <p>6-ինքնության կոդը: <strong id="sixCode">000000</strong></p>
+    </aside>
+
+    <section class="dash-main">
+      <h3>Account տվյալներ</h3>
+      <div id="account-stats" class="cards-grid">
+        <div class="card">Account ստեղծվել է: <span id="createdAt">--</span></div>
+        <div class="card">Tickets: <span id="ticketCount">0</span></div>
+        <div class="card">Online Status: <span id="onlineStatus">Offline</span></div>
+      </div>
+
+      <h3>Ակտիվ Tikets</h3>
+      <div id="ticketsList" class="list"></div>
+    </section>
+  </main>
+</body>
+</html>
