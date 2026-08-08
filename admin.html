@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="hy">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin Panel — THUGINNN IMPERIA</title>
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <script defer src="js/admin.js"></script>
+</head>
+<body class="dark admin-page">
+  <header class="container admin-header">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt="logo" /></a>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="admin.html" class="active">Admin</a>
+      <button id="logout" class="btn btn-ghost">Ելք</button>
+    </nav>
+  </header>
+
+  <main class="container admin-main">
+    <h1>Admin Panel</h1>
+
+    <section class="admin-controls">
+      <div class="admin-card">
+        <h3>Users</h3>
+        <input id="userSearch" placeholder="Search username or email" />
+        <table id="usersTable" class="table">
+          <thead><tr><th>ID</th><th>Username</th><th>Email</th><th>Role</th><th>Actions</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="admin-card">
+        <h3>Servers Management</h3>
+        <button id="addServerBtn" class="btn btn-primary">Add Server</button>
+        <div id="serversList"></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
