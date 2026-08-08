@@ -1,0 +1,58 @@
+:root{
+  --bg:#0b0b0b;
+  --panel:#0f0f12;
+  --accent:#00d2ff;
+  --white:#f7f9fb;
+  --muted:#9aa0a6;
+  --radius:12px;
+}
+
+/* Full-page auth layout */
+body.auth-page{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+  background:linear-gradient(180deg,#060606 0%, #0b0b0b 100%);
+  padding:16px;
+}
+.auth-container{
+  width:100%;
+  max-width:480px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:14px;
+  padding:28px;
+  box-shadow: 0 18px 50px rgba(2,6,12,0.8);
+  border:1px solid rgba(255,255,255,0.03);
+  text-align:center;
+  animation: cardIn .36s ease;
+}
+
+/* Branding */
+.auth-container .brand img{height:58px;width:58px;object-fit:cover;margin-bottom:8px}
+.auth-container h1{margin:6px 0 18px;font-size:22px;color:var(--white)}
+
+/* Form */
+form{display:flex;flex-direction:column;gap:10px;text-align:left}
+label{font-size:13px;color:var(--muted);margin-bottom:4px}
+.form-row{display:flex;align-items:center;justify-content:space-between;margin-top:10px}
+.small{font-size:13px;color:var(--muted);margin-top:10px}
+
+/* Buttons override */
+.auth-container .btn{width:auto;padding:10px 16px;border-radius:10px}
+.auth-container .btn-primary{padding:12px 18px}
+
+/* Forgot link */
+.forgot-link{color:var(--accent);text-decoration:none;font-weight:600}
+
+/* micro animations */
+@keyframes cardIn {
+  from { transform: translateY(12px); opacity: 0 }
+  to { transform: translateY(0); opacity: 1 }
+}
+
+/* Responsive */
+@media (max-width:520px){
+  .auth-container{padding:18px}
+  .auth-container h1{font-size:20px}
+}
