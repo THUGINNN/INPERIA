@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="hy">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>THUGINNN IMPERIA — Մեր Համայնքը</title>
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/main.js"></script>
+</head>
+<body class="dark">
+  <canvas id="bg-canvas" class="bg-canvas"></canvas>
+
+  <header class="main-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="THUGINNN IMPERIA" class="logo" />
+        <span class="brand-text">THUGINNN IMPERIA</span>
+      </a>
+
+      <nav class="nav">
+        <a href="chat.html">Մեր համայնքը</a>
+        <a href="top-servers.html">Top Servers</a>
+        <a href="rules.html">Կանոններ</a>
+        <a href="tickets.html">Տոմսեր</a>
+        <a class="btn btn-ghost" href="login.html">Մուտք</a>
+        <a class="btn btn-primary" href="register.html">Գրանցվել</a>
+        <a class="btn btn-discord" href="#" id="discord-invite">Discord</a>
+        <button id="menu-toggle" class="dot-menu" aria-label="Menu">⋯</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-content">
+        <h1>ԲԱՐԻ ԳԱԼՈՒՍՏ THUGINNN IMPERIA</h1>
+        <p>Armenian Minecraft community — խաղ, ընկերներ և հարգանք։ Միացիր մեզ՝ խաղալու և համայնք զարգացնելու համար։</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="register.html">Գրանցվել</a>
+          <a class="btn btn-ghost" href="login.html">Մուտք</a>
+          <a class="btn btn-discord" href="#" id="hero-discord">Join Discord</a>
+        </div>
+      </div>
+
+      <div class="hero-cards">
+        <div class="card mc-card">
+          <h3>Online Chat</h3>
+          <p>Ուղիղ հաղորդակցություն համայնքի հետ</p>
+        </div>
+        <div class="card mc-card">
+          <h3>Tickets</h3>
+          <p>Աջակցություն և խնդիրների լուծում Discord-ում</p>
+        </div>
+        <div class="card mc-card">
+          <h3>Top Servers</h3>
+          <p>Մեր ցուցակված լավագույն հայկական սերվերները</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="features container">
+      <h2>Ինչու THUGINNN IMPERIA</h2>
+      <div class="feature-grid">
+        <div class="feature">Premium ութեստետիկա 💎</div>
+        <div class="feature">Անհատականացված verification</div>
+        <div class="feature">Ամենուրաս responsive</div>
+        <div class="feature">Discord ինտեգրում</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> THUGINNN IMPERIA — Բոլոր իրավունքները պաշտպանված են</p>
+    </div>
+  </footer>
+
+  <script>
+    // small inline: set invite from env-like placeholder (real URL from backend/.env)
+    document.getElementById('discord-invite').addEventListener('click', e => {
+      e.preventDefault();
+      window.location.href = '#'; // replace with actual invite URL by JS or server
+    });
+    document.getElementById('hero-discord').addEventListener('click', e => {
+      e.preventDefault();
+      window.location.href = '#';
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
