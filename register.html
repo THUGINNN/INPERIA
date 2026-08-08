@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="hy">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Գրանցվել — THUGINNN IMPERIA</title>
+  <link rel="stylesheet" href="css/auth.css" />
+  <script defer src="js/auth.js"></script>
+</head>
+<body class="auth-page dark">
+  <main class="auth-container">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt="logo" /></a>
+    <h1>Գրանցվել</h1>
+
+    <form id="register-form" action="/api/auth/register" method="POST" novalidate>
+      <label for="firstName">Անուն</label>
+      <input id="firstName" name="firstName" type="text" required />
+
+      <label for="lastName">Ազգանուն</label>
+      <input id="lastName" name="lastName" type="text" required />
+
+      <label for="username">Display Name / Username</label>
+      <input id="username" name="username" type="text" required minlength="3" />
+
+      <label for="email">Էլ․ փոստ</label>
+      <input id="email" name="email" type="email" required />
+
+      <label for="password">Գաղտնաբառ (Min 8)</label>
+      <input id="password" name="password" type="password" required minlength="8" />
+
+      <label for="password2">Կրկնել գաղտնաբառը</label>
+      <input id="password2" name="password2" type="password" required minlength="8" />
+
+      <label for="country">Երկիր</label>
+      <input id="country" name="country" type="text" required />
+
+      <label for="minecraft">Minecraft Username</label>
+      <input id="minecraft" name="minecraft" type="text" required />
+
+      <div class="form-row">
+        <button class="btn btn-primary" type="submit">Գրանցվել</button>
+      </div>
+
+      <p class="small">Արդյո՞ք արդեն գրանցվել եք — <a href="login.html">Մուտք</a></p>
+    </form>
+  </main>
+</body>
+</html>
