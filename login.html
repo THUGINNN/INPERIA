@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="hy">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Մուտք — THUGINNN IMPERIA</title>
+  <link rel="stylesheet" href="css/auth.css" />
+  <script defer src="js/auth.js"></script>
+</head>
+<body class="auth-page dark">
+  <main class="auth-container">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt="logo" /></a>
+    <h1>Մուտք</h1>
+
+    <form id="login-form" action="/api/auth/login" method="POST" novalidate>
+      <label for="identifier">Email կամ Username</label>
+      <input id="identifier" name="identifier" type="text" required autocomplete="username" />
+
+      <label for="password">Գաղտնաբառ</label>
+      <input id="password" name="password" type="password" required autocomplete="current-password" />
+
+      <div class="form-row">
+        <a href="forgot-password.html" class="forgot-link">Մոռացե՞լ եք գաղտնաբառը?</a>
+        <button class="btn btn-primary" type="submit">Մուտք</button>
+      </div>
+
+      <p class="small">Չունեք Հաշիվ? <a href="register.html">Գրանցվել</a></p>
+    </form>
+  </main>
+</body>
+</html>
