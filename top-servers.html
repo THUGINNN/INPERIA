@@ -4,41 +4,45 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Top Minecraft Armenian Servers — THUGINNN IMPERIA</title>
+  <link rel="icon" href="assets/favicon.png" />
   <link rel="stylesheet" href="css/style.css" />
   <script defer src="js/main.js"></script>
 </head>
 <body class="dark">
   <header class="container">
-    <a class="brand" href="index.html"><img src="assets/logo.png" alt="logo" /></a>
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="logo" style="height:44px"/></a>
   </header>
 
   <main class="container">
     <h1>TOP MINECRAFT ARMENIAN SERVER</h1>
     <div class="servers-grid">
       <article class="server-card">
+        <img src="assets/servers/darsikhub.png" alt="DarsikHub" style="height:60px;object-fit:contain"/>
         <h3>DarsikHub</h3>
         <p class="ip">darsikhub.20tps.ru</p>
         <p>DarsikHub Top 1 Անարխիա Սերվերը։ Միացիր և գտի նոր ընկերներ։</p>
         <div class="actions">
-          <button class="copy-ip" data-ip="darsikhub.20tps.ru">COPY IP</button>
+          <button class="copy-ip" data-ip="darsikhub.20tps.ru"><img src="assets/icons/copy.svg" alt="copy" style="height:16px;margin-right:6px;vertical-align:middle">COPY IP</button>
         </div>
       </article>
 
       <article class="server-card">
+        <img src="assets/servers/nonsicraft.png" alt="nonSicraft" style="height:60px;object-fit:contain"/>
         <h3>nonSicraft</h3>
         <p class="ip">nonSicraft.net</p>
         <p>nonSicraft TOP 1+ MINEGAMES + SMP։</p>
         <div class="actions">
-          <button class="copy-ip" data-ip="nonSicraft.net">COPY IP</button>
+          <button class="copy-ip" data-ip="nonSicraft.net"><img src="assets/icons/copy.svg" alt="copy" style="height:16px;margin-right:6px;vertical-align:middle">COPY IP</button>
         </div>
       </article>
 
       <article class="server-card">
+        <img src="assets/servers/hayworld.png" alt="HayWorld" style="height:60px;object-fit:contain"/>
         <h3>HayWorld</h3>
         <p class="ip">HayWorld.20tps.ru</p>
         <p>HayWorld TOP 2 Անարխիա LITE համայնք։</p>
         <div class="actions">
-          <button class="copy-ip" data-ip="HayWorld.20tps.ru">COPY IP</button>
+          <button class="copy-ip" data-ip="HayWorld.20tps.ru"><img src="assets/icons/copy.svg" alt="copy" style="height:16px;margin-right:6px;vertical-align:middle">COPY IP</button>
         </div>
       </article>
     </div>
@@ -49,8 +53,9 @@
       btn.addEventListener('click', () => {
         const ip = btn.dataset.ip;
         navigator.clipboard.writeText(ip).then(() => {
-          btn.textContent = 'Copied!';
-          setTimeout(() => btn.textContent = 'COPY IP', 1500);
+          const original = btn.innerHTML;
+          btn.innerHTML = '<img src="assets/icons/copy.svg" alt="copied" style="height:16px;margin-right:6px;vertical-align:middle">Copied!';
+          setTimeout(() => btn.innerHTML = original, 1500);
         });
       });
     });
