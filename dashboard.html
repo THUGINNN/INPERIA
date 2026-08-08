@@ -4,12 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dashboard — THUGINNN IMPERIA</title>
+  <link rel="icon" href="assets/favicon.png" />
   <link rel="stylesheet" href="css/dashboard.css" />
   <script defer src="js/dashboard.js"></script>
 </head>
 <body class="dark">
   <header class="dash-header">
-    <a class="brand" href="index.html"><img src="assets/logo.png" alt="logo" /></a>
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="logo" style="height:38px"/></a>
     <nav>
       <a href="chat.html">Chat</a>
       <a href="tickets.html">Tickets</a>
@@ -21,7 +22,7 @@
 
   <main class="dashboard container">
     <aside class="profile-card">
-      <div class="avatar" id="avatar">A</div>
+      <img src="assets/avatar-defualt.png" alt="avatar" class="avatar" style="width:86px;height:86px;border-radius:12px;object-fit:cover"/>
       <h2 id="displayName">--</h2>
       <p id="realName">--</p>
       <p class="muted">Minecraft: <span id="minecraftName">--</span></p>
@@ -39,7 +40,7 @@
         <div class="card">Online Status: <span id="onlineStatus">Offline</span></div>
       </div>
 
-      <h3>Ակտիվ Tikets</h3>
+      <h3>Ակտիվ Tickets</h3>
       <div id="ticketsList" class="list"></div>
     </section>
   </main>
