@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="hy">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Էլ․ փոստի հաստատում — THUGINNN IMPERIA</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/verification.js"></script>
+</head>
+<body class="dark">
+  <main class="container verification">
+    <div class="card">
+      <h1>Էլ․ փոստի հաստատում</h1>
+      <p id="message">Կատարվում է առցանց գործընթացը, խնդրում ենք մի պահ սպասել…</p>
+      <div id="action" style="display:none;">
+        <a href="login.html" class="btn btn-primary">Մուտք</a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // verification.js handles token fetch; small fallback here:
+    (function(){
+      const params = new URLSearchParams(window.location.search);
+      const token = params.get('token');
+      if (!token) {
+        document.getElementById('message').textContent = 'Թողեք հաստատման տեխնիկական սխալ՝ հնարավոր չէ գտնել token։';
+        return;
+      }
+      fetch('/api/auth/verify-email?token=' + encodeURIComponent(token), { method: 'POST' })
+        .then(r => r.json())
+        .then(j => {
+          if (j && j.ok) {
+            document.getElementById('message').textContent = 'Շնորհակալություն, ձեր էլ․ փոստը հաստատվեց։ Դուք կարող եք մուտք գործել։';
+            document.getElementById('action').style.display = 'block';
+          } else {
+            document.getElementById('message').textContent = j.error || 'Հաստատման ժամանակ խնդիր է առաջացել։';
+          }
+        }).catch(e => {
+          document.getElementById('message').textContent = 'Սերվերի հետ կապի խնդիր։';
+        });
+    })();
+  </script>
+</body>
+</html>
