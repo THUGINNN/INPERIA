@@ -1,0 +1,30 @@
+{
+  "name": "thuginnn-imperia",
+  "version": "1.0.0",
+  "description": "THUGINNN IMPERIA — Armenian Minecraft community site + API (Node/Express) with Discord bot integration",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js",
+    "lint": "echo \"no linter configured\""
+  },
+  "author": "THUGINNN",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "csurf": "^1.11.0",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.0.0",
+    "helmet": "^7.0.0",
+    "jsonwebtoken": "^9.0.0",
+    "nodemailer": "^6.9.4",
+    "socket.io": "^4.7.1",
+    "sqlite3": "^5.1.6",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
