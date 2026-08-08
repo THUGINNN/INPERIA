@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="hy">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Top Minecraft Armenian Servers — THUGINNN IMPERIA</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/main.js"></script>
+</head>
+<body class="dark">
+  <header class="container">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt="logo" /></a>
+  </header>
+
+  <main class="container">
+    <h1>TOP MINECRAFT ARMENIAN SERVER</h1>
+    <div class="servers-grid">
+      <article class="server-card">
+        <h3>DarsikHub</h3>
+        <p class="ip">darsikhub.20tps.ru</p>
+        <p>DarsikHub Top 1 Անարխիա Սերվերը։ Միացիր և գտի նոր ընկերներ։</p>
+        <div class="actions">
+          <button class="copy-ip" data-ip="darsikhub.20tps.ru">COPY IP</button>
+        </div>
+      </article>
+
+      <article class="server-card">
+        <h3>nonSicraft</h3>
+        <p class="ip">nonSicraft.net</p>
+        <p>nonSicraft TOP 1+ MINEGAMES + SMP։</p>
+        <div class="actions">
+          <button class="copy-ip" data-ip="nonSicraft.net">COPY IP</button>
+        </div>
+      </article>
+
+      <article class="server-card">
+        <h3>HayWorld</h3>
+        <p class="ip">HayWorld.20tps.ru</p>
+        <p>HayWorld TOP 2 Անարխիա LITE համայնք։</p>
+        <div class="actions">
+          <button class="copy-ip" data-ip="HayWorld.20tps.ru">COPY IP</button>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <script>
+    document.querySelectorAll('.copy-ip').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const ip = btn.dataset.ip;
+        navigator.clipboard.writeText(ip).then(() => {
+          btn.textContent = 'Copied!';
+          setTimeout(() => btn.textContent = 'COPY IP', 1500);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
